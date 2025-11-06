@@ -1,8 +1,11 @@
-import Game
+import System.IO (hSetEncoding, stdout, stdin, utf8)
+import Server.Manager
 import Core.Board (Player(..))  -- THÊM DÒNG NÀY
 
 main :: IO ()
 main = do
+  hSetEncoding stdout utf8
+  hSetEncoding stdin utf8
   putStrLn "Chọn độ khó AI:"
   putStrLn "1. Dễ (depth 3)"
   putStrLn "2. Trung bình (depth 5)"

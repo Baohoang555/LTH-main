@@ -59,12 +59,13 @@ executable LTH
     import:           warnings
 
     -- .hs or .lhs file containing the Main module.
-    main-is:          Main.hs
+    main-is:          Server/Main.hs
 
     -- Modules included in this executable, other than Main.
-    other-modules: Core.Board
-      Core.AI
-      Game
+    other-modules: 
+      Core.Board,
+      Core.AI,
+      Server.Manager
 
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
@@ -78,7 +79,7 @@ executable LTH
 
 
     -- Directories containing source files.
-    hs-source-dirs:   app, src
+    hs-source-dirs:   src, app
 
     -- Base language which the package is written in.
     default-language: GHC2021
